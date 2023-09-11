@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 const corsOptions = {
     origin: [
-      "https://sage-sherbet-ccb1c2.netlify.app/login",
+      "https://sage-sherbet-ccb1c2.netlify.app",
       "http://localhost:3000",
     ],
     allowedHeaders: ["Content-Type"],
