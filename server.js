@@ -4,9 +4,8 @@ const cors = require("cors");
 const app = express();
 const corsOptions = {
     origin: [
-      "https://admirable-stardust-6a2899.netlify.app",
+      "https://sage-sherbet-ccb1c2.netlify.app/login",
       "http://localhost:3000",
-      "https://resilient-dieffenbachia-dadf28.netlify.app",
     ],
     allowedHeaders: ["Content-Type"],
     exposedHeaders: ["Access-Control-Allow-Origin"],
