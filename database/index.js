@@ -22,6 +22,8 @@ const addAccount = async (name, password) => {
     date: "",
     location: "",
     otherDetails: "",
+    latitude: '',
+    longitude: '',
   });
   const __ = collectionGuests.insertOne({
     userId: _id,
@@ -49,10 +51,13 @@ const createInvitation = async (
   location,
   otherDetails,
   type,
-  userId
+  userId,
+  latitude,
+  longitude
 ) => {
   // const inviteId = new ObjectId();
   console.log("user id :" + userId);
+  console.log(latitude, longitude)
   const _ = await collectionInvitation.updateOne(
     { userId: new ObjectId(userId) },
     {
@@ -62,6 +67,8 @@ const createInvitation = async (
         location,
         otherDetails,
         type,
+        latitude,
+        longitude,
       },
     }
   );
